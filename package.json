@@ -1,0 +1,24 @@
+{
+  "name": "tongadive",
+  "version": "1.0.0",
+  "description": "Assignment XML parser",
+  "main": "app.js",
+  "scripts": {
+    "start":"node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParadoxInfinite/tongadive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ParadoxInfinite/tongadive/issues"
+  },
+  "homepage": "https://github.com/ParadoxInfinite/tongadive#readme",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1"
+  }
+}

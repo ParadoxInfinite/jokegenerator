@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            color : white;
+            background-color: #4d4d4d;
+            text-align: center;
+        }
+    </style>
+    <title>Sample XML parser</title>
+</head>
+<body>
+    <div class="container">
+            <h2>XML Parser</h2>
+            <h3>Joke Generator</h3>
+            <form method="POST">
+                <input type="submit" value="Generate Joke">
+            </form>
+            <% if (result) { %>
+                <div class="joke">
+                    <p><strong>Category : </strong><span id="category"></span></p>
+                    <p id="setup"></p>
+                    <p id="delivery"></p>
+                </div>
+            <% } %>
+            <% if (error) { %>
+                <p id="error"></p>
+            <% } %>
+    </div>
+</body>
+<script>
+    console.log(`<%- joke %>`)
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(`<%- joke %>`,"text/xml");
+    const joke = ['setup','delivery','category']
+    joke.forEach((element)=>{
+        document.getElementById(element).innerHTML = xmlDoc.getElementsByTagName(element)[0].childNodes[0].nodeValue;
+    })
+</script>
+</html>
