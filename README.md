@@ -1,2 +1,2 @@
-# tongadive
+# jokegenerator
 Internship assignment XML parser
